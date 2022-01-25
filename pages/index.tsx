@@ -21,20 +21,32 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+        <div className="pt-6 pb-3 space-y-2 md:space-y-5">
+          <h1 className="text-4xl font-bold leading-9 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            Hi, I'm Sitesh 👋
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+          <p className="pt-2 pb-4 text-lg leading-7 text-gray-500 dark:text-gray-400">
+            <h2 className="font-bold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-zinc-600 via-blue-500 to-emerald-700 dark:text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-emerald-500 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+              {' '}
+              I write long form essays about technologies and various concepts. Currently exploring
+              Web 3.0{' '}
+            </h2>
           </p>
+          <div className="pt-12 pb-4 space-y-5 md:space-y-5">
+            <h1 className="text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
+              Latest
+            </h1>
+            <p className="text leading-7 text-gray-500 dark:text-gray-400 ">
+              <h2>{siteMetadata.description}</h2>
+            </p>
+          </div>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-7">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
