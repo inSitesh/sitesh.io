@@ -20,27 +20,30 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-3 space-y-2 md:space-y-5">
-          <h1 className="text-4xl font-bold leading-9 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-            Hi, I'm Sitesh 👋
-          </h1>
-          <p className="pt-2 pb-4 text-lg leading-7 text-gray-500 dark:text-gray-400">
-            <h2 className="font-bold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-zinc-600 via-blue-500 to-emerald-700 dark:text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-emerald-500 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-              {' '}
-              I write long form essays about technologies and various concepts. Currently exploring
-              Web 3.0{' '}
-            </h2>
-          </p>
-          <div className="pt-12 pb-4 space-y-5 md:space-y-5">
-            <h1 className="text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
-              Latest
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <div className="flex flex-col-reverse sm:flex-row items-start">
+          <div className="flex flex-col pr-8">
+            <h1 className="font-bold tracking-wide text-3xl md:text-4xl md:pb-1 mb-1 text-black dark:text-white pt-6  ">
+              Hi, I'm Sitesh 👋
             </h1>
-            <p className="text leading-7 text-gray-500 dark:text-gray-400 ">
-              <h2>{siteMetadata.description}</h2>
+            <h2 className="text-gray-700 tracking-wide dark:text-gray-200 mb-4">
+              #Write <span className="font-semibold underline decoration-pink-500">#Buidl</span>{' '}
+              #Ship
+            </h2>
+            <p className="font-bold text-transparent text-xl text-transparent bg-clip-text bg-gradient-to-r from-zinc-600 via-blue-500 to-emerald-700 dark:text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-emerald-500 mb-16">
+              Writing essays to make technology, Web 3.0 and complex concepts heard in the simplest
+              way.
             </p>
+            <div className="flex flex-col divide-y-grey-600 space-y-5 md:space-y-5"></div>
+            <h3 className="text-xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 sm:text-2xl md:text-2xl md:leading-12 underline decoration-blue-500 underline-offset-8 ">
+              Recent posts
+            </h3>
+            {/* <p className="text leading-7 divide-grey-200 text-gray-500 dark:text-gray-400 ">
+              <h2>{siteMetadata.description}</h2>
+            </p> */}
           </div>
         </div>
+
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {

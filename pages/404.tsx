@@ -14,8 +14,11 @@ export default function FourZeroFour() {
         </p>
         <p className="mb-2">I know it sounds crazy.</p>
         <p className="mb-8">
-          But <b>Don't panic</b>, please check if there is a <i>typo in the URL</i> or Start from
-          Home.
+          But <b>Don't panic</b>, please check if there is a{' '}
+          <i>
+            typo in the <u>URL</u>
+          </i>{' '}
+          or Start from Home.
         </p>
         <Link href="/">
           <button className="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg shadow focus:outline-none focus:shadow-outline-blue hover:bg-blue-700 dark:hover:bg-blue-500">

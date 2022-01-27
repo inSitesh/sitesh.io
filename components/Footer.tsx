@@ -5,7 +5,7 @@ import SocialIcon from '@/components/social-icons'
 export default function Footer() {
   return (
     <footer>
-      <div className="flex flex-col items-center mt-16">
+      <div className="flex flex-col items-center mt-16 mb-10">
         <div className="flex mb-3 space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
           <SocialIcon kind="github" href={siteMetadata.github} size={6} />
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400 ">
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{siteMetadata.author}</div>
           {/* <div>{` • `}</div> */}
@@ -56,13 +56,7 @@ export default function Footer() {
           {/* <Link href="/">{siteMetadata.title}</Link> */}
         </div>
 
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          {`🍁`}
-          {/* <Link href="https://github.com/inSitesh/tailwind-nextjs-starter-blog">
-            Tailwind Nextjs Theme
-          </Link> 
-          for  some imp link ex.-Linktr.ee*/}
-        </div>
+        {/* <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">{`🍁`}</div> */}
       </div>
     </footer>
   )
