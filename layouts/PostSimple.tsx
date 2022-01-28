@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
+import PostContainer from '@/components/PostContainer '
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
@@ -20,7 +21,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
   const { slug, date, title } = frontMatter
 
   return (
-    <SectionContainer>
+    <PostContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
       <ScrollTopAndComment />
       <article>
@@ -75,6 +76,6 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
           </div>
         </div>
       </article>
-    </SectionContainer>
+    </PostContainer>
   )
 }

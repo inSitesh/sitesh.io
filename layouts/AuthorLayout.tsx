@@ -17,19 +17,25 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-bold leading-9 tracking-normal text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8 space-x-2">
-            <Image
-              src={avatar}
-              alt="avatar"
-              width="192px"
-              height="192px"
-              className="w-48 h-48 rounded-full"
-            />
+            <div className="bg-gradient-to-tr from-emerald-500 to-blue-500 p-1 rounded-full pt-">
+              <a className="block bg-neutral-900  pt-2 px-2 pb-1 rounded-full ">
+                <Image
+                  src={avatar}
+                  alt="avatar"
+                  width="110px"
+                  height="110px"
+                  className="w-48 h-48  rounded-full"
+                  // <a> ring-2 ring-blue-500 ring-offset-2 ring-offset-neutral-900 [#ed03ff]
+                  // </a>
+                />
+              </a>
+            </div>
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
