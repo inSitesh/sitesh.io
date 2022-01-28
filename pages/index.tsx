@@ -27,7 +27,10 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               Hi, I'm Sitesh 👋
             </h1>
             <h2 className="text-gray-700 tracking-wide dark:text-gray-200 mb-4">
-              #Write <span className="font-semibold underline decoration-pink-500">#Buidl</span>{' '}
+              #Write{' '}
+              <span className="font-semibold underline decoration-pink-500 underline-offset-2">
+                #Buidl
+              </span>{' '}
               #Ship
             </h2>
             <p className="font-bold text-transparent text-xl text-transparent bg-clip-text bg-gradient-to-r from-zinc-600 via-blue-500 to-emerald-700 dark:text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-emerald-500 mb-16">
