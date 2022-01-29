@@ -24,7 +24,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8 space-x-2">
             <div className="bg-gradient-to-tr from-emerald-500 to-blue-500 p-1 rounded-full pt-">
-              <a className="block bg-neutral-900  pt-2 px-2 pb-1 rounded-full ">
+              <a className="block bg-white dark:bg-neutral-900 pt-2 px-2 pb-1 rounded-full ">
                 <Image
                   src={avatar}
                   alt="avatar"
