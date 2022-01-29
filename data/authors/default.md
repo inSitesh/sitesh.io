@@ -1,7 +1,7 @@
 ---
 name: Sitesh Kumar Sahoo
 avatar: /static/images/avatar.png
-occupation: Software developer and curious Writer 
+occupation: Writer and Software developer 
 # company: Decefy
 email: insitesh@gmail.com
 twitter: https://twitter.com/inSitesh
@@ -9,8 +9,4 @@ twitter: https://twitter.com/inSitesh
 github: https://github.com/inSitesh
 ---
 
-Sitesh Kumar Sahoo. Web3 Blockchain. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Writing essays to make technology, Web 3.0 and complex concepts heard in the simplest way. A CS student  
