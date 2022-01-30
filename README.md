@@ -1,8 +1,9 @@
 # Sitesh • My website 
 
-Checkout the[<b> Blog &rarr;</b>](https://nextjs.org/)
+### Checkout the[<b> Blog &rarr;</b>](https://sitesh.me/)
 </br>
-[<b>@inSitesh</b> on Twitter](https://twitter.com/inSitesh/)
+
+#### [<b>@inSitesh</b> on Twitter](https://twitter.com/inSitesh/)
 
 </br>
 
