@@ -24,14 +24,14 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     const { error } = await res.json()
     if (error) {
       setError(true)
-      setMessage('Your e-mail address is invalid or you are already subscribed!')
+      setMessage('Your e-mail address is invalid :( or you are already subscribed!')
       return
     }
 
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('Yay! 🎉 You are now subscribed.')
+    setMessage('You are now subscribed 🎉.')
   }
 
   return (
@@ -43,6 +43,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
             Email address
           </label>
           <input
+            aria-label="Email for newsletter"
             autoComplete="email"
             className="px-4 rounded-md w-72 dark:bg-black focus:outline-none focus:ring-2 focus:border-transparent focus:ring-primary-600"
             id="email-input"

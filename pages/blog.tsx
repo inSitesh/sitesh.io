@@ -4,6 +4,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ComponentProps } from 'react'
+import NewsletterForm from '@/components/NewsletterForm'
 
 export const POSTS_PER_PAGE = 5
 
@@ -36,6 +37,11 @@ export default function Blog({
         pagination={pagination}
         title="All Posts"
       />
+      {siteMetadata.newsletter.provider !== '' && (
+        <div className="flex items-center justify-center pt-10">
+          <NewsletterForm />
+        </div>
+      )}
     </>
   )
 }

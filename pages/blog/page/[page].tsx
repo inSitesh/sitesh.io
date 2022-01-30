@@ -5,6 +5,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { POSTS_PER_PAGE } from '../../blog'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
+import NewsletterForm from '@/components/NewsletterForm'
 
 export const getStaticPaths: GetStaticPaths<{ page: string }> = async () => {
   const totalPosts = await getAllFilesFrontMatter('blog')
@@ -61,6 +62,11 @@ export default function PostPage({
         pagination={pagination}
         title="All Posts"
       />
+      {siteMetadata.newsletter.provider !== '' && (
+        <div className="flex items-center justify-center pt-10">
+          <NewsletterForm />
+        </div>
+      )}
     </>
   )
 }
