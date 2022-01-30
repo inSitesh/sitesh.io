@@ -18,7 +18,7 @@ export default function Footer() {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700 pb-14"></ul>
 
         {/* {all footer links} */}
-        <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
+        <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-14 sm:grid-cols-3">
           <div className="flex flex-col space-y-4">
             <Link href="/">
               <a className="text-gray-500 hover:text-gray-600">Home</a>
