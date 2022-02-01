@@ -40,6 +40,14 @@ class MyDocument extends Document {
             integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"
             crossOrigin="anonymous"
           />
+          <script
+            data-host="https://microanalytics.io"
+            data-dnt="false"
+            src="https://microanalytics.io/js/script.js"
+            id="ZwSg9rf6GA"
+            async
+            defer
+          ></script>
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
