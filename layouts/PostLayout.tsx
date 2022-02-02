@@ -116,7 +116,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
           </div>
           <footer>
             <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
-              {tags && (
+              {/* {tags && (
                 <div className="py-4 ">
                   <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                     Tags
@@ -127,7 +127,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
               {(next || prev) && (
                 <div
                   className="py-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-2 xl:gap-x-16 "
