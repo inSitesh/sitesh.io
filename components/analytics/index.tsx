@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Umami from './Umami'
+import GA from './GoogleAnalytics'
 import siteMetadata from '@/data/siteMetadata'
 
 declare global {
@@ -13,7 +14,12 @@ declare global {
 const isProduction = process.env.NODE_ENV === 'production'
 
 const Analytics = () => {
-  return <>{isProduction && siteMetadata.analytics.umamiWebsiteId && <Umami />}</>
+  return (
+    <>
+      {isProduction && siteMetadata.analytics.umamiWebsiteId && <Umami />}
+      {isProduction && siteMetadata.analytics.googleAnalyticsId && <GA />}
+    </>
+  )
 }
 
 export default Analytics

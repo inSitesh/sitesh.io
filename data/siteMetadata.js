@@ -22,8 +22,8 @@ const siteMetadata = {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
     // plausibleDataDomain: '', // e.g. sitesh-io.vercel.app
     // simpleAnalytics: false, // true or false
-    umamiWebsiteId: '4bd89547-9fd3-4b19-a4d2-898508af89a5', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    // googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    // umamiWebsiteId: '4bd89547-9fd3-4b19-a4d2-898508af89a5', // e.g. 123e4567-e89b-12d3-a456-426614174000
+    googleAnalyticsId: 'G-0N2KQ05D8D', // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo
