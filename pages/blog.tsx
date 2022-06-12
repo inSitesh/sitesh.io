@@ -6,7 +6,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ComponentProps } from 'react'
 import NewsletterForm from '@/components/NewsletterForm'
 
-export const POSTS_PER_PAGE = 5
+export const POSTS_PER_PAGE = 20
 
 export const getStaticProps: GetStaticProps<{
   posts: ComponentProps<typeof ListLayout>['posts']

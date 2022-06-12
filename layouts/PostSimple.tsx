@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
-import SectionContainer from '@/components/SectionContainer'
+// import SectionContainer from '@/components/SectionContainer'
 import PostContainer from '@/components/PostContainer '
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
@@ -27,18 +27,26 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
       <article>
         <div>
           <header>
-            <div className="pb-10 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
-              <dl>
-                <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(date)}</time>
-                  </dd>
-                </div>
-              </dl>
-              <div>
+            <div className="pb-4 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
+              <div className="pt-6">
                 <PageTitle>{title}</PageTitle>
               </div>
+              <dl>
+                <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
+                  <div className="flex items-center">
+                    <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                      {' '}
+                      {/* {`${siteMetadata.author}`}{' '} */}
+                    </p>
+                  </div>
+                  <div>
+                    <dt className="sr-only">Published on</dt>
+                    <dd className="text-sm font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <time dateTime={date}>{formatDate(date)}</time>
+                    </dd>
+                  </div>
+                </div>
+              </dl>
             </div>
           </header>
           <div
