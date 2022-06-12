@@ -36,6 +36,9 @@ export default function Footer() {
             {/* <Link href="https://www.youtube.com/channel/">YouTube</Link> */}
           </div>
           <div className="flex flex-col space-y-4">
+            <Link href="https://insitesh.medium.com">
+              <a className="text-gray-400 hover:text-gray-600 transition">Medium</a>
+            </Link>
             {/* <Link href="/uses">
               <a className="text-gray-500 hover:text-gray-600 transition">Reccos</a>
             </Link>

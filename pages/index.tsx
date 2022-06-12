@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
+// import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
@@ -47,42 +47,38 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </div>
         </div>
 
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul>
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-4">
                 <article>
-                  <div className="space-y-1 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-sm font-medium leading-4 text-gray-500 dark:text-gray-500">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-1 xl:col-span-3">
-                      <div className="space-y-0">
-                        <div>
-                          <h2 className="text-xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          {/* <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div> */}
+                  <a className="w-full" href={`/blog/${slug}`}>
+                    <div className="space-y-1 xl:grid xl:grid-cols-3 xl:space-y-0 xl:items-baseline">
+                      <div className="space-y-1 xl:col-span-3">
+                        <div className="space-y-0">
+                          <div className="flex flex-col justify-between md:flex-row">
+                            <h2 className="mb-1 text-xl font-bold leading-8 tracking-tight">
+                              <Link
+                                href={`/blog/${slug}`}
+                                className="text-gray-900 dark:text-gray-100"
+                              >
+                                {title}
+                              </Link>
+                            </h2>
+                            <dl>
+                              <dt className="sr-only">Published on</dt>
+                              <dd className="text-sm font-medium leading-5 text-gray-500 dark:text-gray-500">
+                                <time dateTime={date}>{formatDate(date)}</time>
+                              </dd>
+                            </dl>
+                          </div>
+                          <div className=" text-gray-500 max-w-none dark:text-gray-400 leading-normal">
+                            {summary}
+                          </div>
                         </div>
-                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
+                        {/* <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-400 hover:text-primary-600 dark:hover:text-primary-300"
@@ -90,9 +86,11 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                         >
                           Read more &rarr;
                         </Link>
+                      </div> */}
                       </div>
+                      {/* </a> */}
                     </div>
-                  </div>
+                  </a>
                 </article>
               </li>
             )
